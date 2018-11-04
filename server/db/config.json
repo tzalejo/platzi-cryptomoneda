@@ -1,0 +1,8 @@
+{
+    "DB_HOST": "localhost",
+    "DB_PORT": 27017,
+    "DB_NAME": "platzi-criptongo",
+    "DB_TABLA": "cryptomoneda",
+    "API_URL":"https://api.coinmarketcap.com/v1/ticker/"
+    
+}
