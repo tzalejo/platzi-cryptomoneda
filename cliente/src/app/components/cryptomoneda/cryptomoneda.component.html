@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col s10">
+      <table>
+        <thead>
+          <!-- <th> id</th>  -->
+          <th> Nombre</th> 
+          <th> Simbolo</th> 
+          <!-- <th> rank</th>  -->
+          <!-- <th> price_usd</th>  -->
+          <!-- <th> price_btc</th>  -->
+          <th> Ranking</th> 
+          <th> Suminitro Disponible</th> 
+          <th> Suministro Total</th> 
+          <!-- <th> Max_supply</th>  -->
+          <!-- <th> percent_change_1h</th>  -->
+          <!-- <th> percent_change_24h</th>  -->
+          <th> Cambio Porcentual(7 dias) </th> 
+          <!-- <th> last_updated</th>  -->
+          <!-- <th> hash_cryptomoneda</th>  -->
+          <!-- Name	Market Cap	Price	Volume (24h)	Circulating Supply	Change (24h)	Price Graph (7d)	 -->
+        </thead>
+        <tbody>
+          <tr *ngFor="let cryptomoneda of cryptomonedaService.cryptomoneda">
+            <td>{{cryptomoneda.name}}</td>
+            <td>{{cryptomoneda.symbol}}</td>
+            <td>{{cryptomoneda.rank}}</td>
+            <td>{{cryptomoneda.price_usd}}</td>
+            <td>{{cryptomoneda.total_supply}}</td>
+            <td>{{cryptomoneda.percent_change_7d}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col s2">
+      <div class="card-action">
+        <div class="input-field col s12">
+          <button class="btn right" (click)='getCryptomoneda()' >actualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
