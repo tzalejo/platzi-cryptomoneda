@@ -7,15 +7,15 @@
           <th> Nombre</th> 
           <th> Simbolo</th> 
           <!-- <th> rank</th>  -->
-          <!-- <th> price_usd</th>  -->
+          <th> price_usd</th> 
           <!-- <th> price_btc</th>  -->
           <th> Ranking</th> 
-          <th> Suminitro Disponible</th> 
+          <!-- <th> Suminitro Disponible</th>  -->
           <th> Suministro Total</th> 
           <!-- <th> Max_supply</th>  -->
           <!-- <th> percent_change_1h</th>  -->
-          <!-- <th> percent_change_24h</th>  -->
-          <th> Cambio Porcentual(7 dias) </th> 
+          <th> Cambio % (24h)</th> 
+          <th> Cambio % (7d) </th> 
           <!-- <th> last_updated</th>  -->
           <!-- <th> hash_cryptomoneda</th>  -->
           <!-- Name	Market Cap	Price	Volume (24h)	Circulating Supply	Change (24h)	Price Graph (7d)	 -->
@@ -24,10 +24,11 @@
           <tr *ngFor="let cryptomoneda of cryptomonedaService.cryptomoneda">
             <td>{{cryptomoneda.name}}</td>
             <td>{{cryptomoneda.symbol}}</td>
+            <td>{{cryptomoneda.price_usd | currency}}</td>
             <td>{{cryptomoneda.rank}}</td>
-            <td>{{cryptomoneda.price_usd}}</td>
-            <td>{{cryptomoneda.total_supply}}</td>
-            <td>{{cryptomoneda.percent_change_7d}}</td>
+            <td>{{cryptomoneda.total_supply | number}}</td>
+            <td>{{cryptomoneda.percent_change_24h  }}</td>
+            <td>{{cryptomoneda.percent_change_7d  }}</td>
           </tr>
         </tbody>
       </table>
