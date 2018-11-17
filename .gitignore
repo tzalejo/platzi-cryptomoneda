@@ -1,7 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-server/node_modules
-cliente/node_modules
+**/node_modules/*
+# server/node_modules
+# cliente/node_modules
 
 
 # compiled output
